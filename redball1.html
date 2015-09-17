@@ -21,6 +21,66 @@
             function moveup(){
                 redball.top=redball.top-10;
             }
+            //move down right
+            function movedownright(){
+              movedown();
+              moveright();
+                
+            
+                
+            }
+            //move triangle 
+            function movetriangle(){
+              movedown();
+              moveright();
+              movedown();
+              moveright();
+              movedown();
+              moveright();
+              movedown();
+              moveright();
+              movedown();
+              moveright();
+              movedown();
+              moveright();
+              
+              moveup();
+              moveright();
+              moveup();
+              moveright();
+              moveup();
+              moveright();
+              moveup();
+              moveright();
+              moveup();
+              moveright();
+              moveup();
+              moveright();
+              
+              moveleft();
+              moveleft();
+              
+              moveleft();
+              
+              moveleft();
+              moveleft();
+              moveleft();
+               moveleft();
+              moveleft();
+              
+              moveleft();
+              
+              moveleft();
+              moveleft();
+              moveleft();
+              
+              
+              
+           
+            
+                
+            }
+            
             function movesquare(){
                 // side to the right 7X10//
                 moveright();
@@ -30,7 +90,7 @@
                 moveright();
                 moveright();
                 moveright();
-                moveright();
+               
                 
                 //slide down 7 times//
                 movedown();
@@ -49,6 +109,7 @@
                 moveleft();
                 moveleft();
                 moveleft();
+                
                 
                 //slide up 7 times
                 
@@ -74,6 +135,9 @@
        <button onclick="movedown()">move down</button>
        <button onclick="moveup()">move up</button>
         <button onclick="movesquare()">move square</button>
+     <button onclick="movedownright()">move down right</button>
+       <button onclick="movetriangle()">move triangle</button>
+       
        
     </body>
 </html>
