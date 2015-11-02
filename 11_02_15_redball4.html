@@ -1,0 +1,118 @@
+<!DoctypeHTML> 
+<html> 
+
+<head> 
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<style type="text/css">
+#redball {
+	
+position:relative;
+left:190px;
+} 
+
+#button{
+	top:25px;
+	left:600px;
+}
+</style>
+</head> 
+<title> Redball 4 </title>
+
+<body> 
+
+<table border="4px"; alight="right">
+<tr>
+				<td><button id="diagupright">&#8599;</button></td>
+				<td><button id="up">&uarr;</button></td>
+				<td><button id="diagupleft">&#8598;</button></td>
+				<td><button id="zoomout"> Zoom Out</button> </td>
+				<td><button id="square">&#8688;</button></td>
+				
+				</tr>
+				<tr>
+				<td><button id="left">&larr;</button></td>
+				<td><button id="zoomin">Zoom In</button></td>
+				<td><button id="right">&rarr;</button></td>
+				<td><button id="octagon">Octagon</button></td>
+				<td><button id="triangle">Triangle</button></td>
+				
+				</tr>
+
+				<tr>
+				<td><button id="diagdownright">&#8600;</button></td>
+				<td><button id="down">&darr;</button></td>
+				<td><button id="diagdownleft">&#8601;</button></td>
+				<td><button id="normal">back to normal</button></td>
+				</tr>
+
+
+</table>
+<img id="redball" src="redball.jpg"/>
+<script> 
+			$("#left").click(function(){
+				$("#redball").animate({"left":"-=28px"},"fast");
+			});
+			$("#right").click(function(){
+				$("#redball").animate({"left":"+=28px"},"fast");
+			});
+			$("#up").click(function(){
+				$("#redball").animate({"top":"-=28px"},"fast");
+			});
+			$("#down").click(function(){
+				$("#redball").animate({"top":"+=28px"},"fast");
+			});
+			$("#diagdownleft").click(function(){
+				$("#redball").animate({"top":"+=28px","left":"-=28px"},"fast");
+			});
+			$("#diagupleft").click(function(){
+				$("#redball").animate({"top":"-=28px","left":"-=28px"},"fast");
+			});
+			$("#diagdownright").click(function(){
+				$("#redball").animate({"top":"+=28px","left":"+=28px"},"fast");
+			});
+			$("#diagupright").click(function(){
+				$("#redball").animate({"top":"-=28px","left":"+=28px"},"fast");
+			});
+			$("#square").click(function(){
+				$("#redball").animate({"left":"-=80px"},"fast");
+				$("#redball").animate({"top":"+=80px"},"fast");
+				$("#redball").animate({"left":"+=80px"},"fast");
+				$("#redball").animate({"top":"-=80px"},"fast");
+			});
+			
+			$("#triangle").click(function() {
+				$("#redball").animate({"top":"+=80px","left":"+=80px"},"fast");
+				$("#redball").animate({"left":"-=160px"},"fast");
+				$("#redball").animate({"top":"-=80px","left":"+=80px"},"fast");
+			});
+			
+			$("#octagon").click(function(){
+				$("#redball").animate({"left":"+=120px"},"fast");
+				$("#redball").animate({"top":"+=80px","left":"+=80px"},"fast");
+				$("#redball").animate({"top":"+=160px"},"fast");
+				$("#redball").animate({"top":"+=80px","left":"-=80px"},"fast");
+				$("#redball").animate({"left":"-=120px"},"fast");
+				$("#redball").animate({"top":"-=80px","left":"-=80px"},"fast");
+				$("#redball").animate({"top":"-=160px"},"fast");
+				$("#redball").animate({"top":"-=80px","left":"+=80px"},"fast");
+			});	
+			$("#normal").click(function(){	
+				$("#redball").css({width:"",height:"",opacity:""},1000,"linear")
+				});	
+			
+
+			$("#zoomout").click(function(){
+				$("#redball").animate({width:"30%",opacity:.25,height:"30%"},1000,"linear")
+			});
+		
+
+			$("#zoomin").click(function(){
+				$("#redball").animate({width:"",opacity:"",height:"",},1000,"linear")
+			});
+</script> 
+
+
+</body>
+</html>
+
+
